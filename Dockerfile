@@ -17,6 +17,4 @@ COPY . .
 
 EXPOSE 8000
 
-# CMD ["python", "-m", "uvicorn", "config.asgi:application", "--host", "0.0.0.0", "--port", "8000", "--loop", "uvloop"]
-
 CMD ["uv", "run", "daphne", "config.asgi:application", "-b", "0.0.0.0", "-p", "8000"]
